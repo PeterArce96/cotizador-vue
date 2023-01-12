@@ -9,14 +9,9 @@
   })
 
   function handleChange(e){
-    cantidad.value = e.target.value;
+    state.cantidad = e.target.value;
   }
 
-  // mostrar con ref
-  console.log(cantidad.value);
-
-  // mostrar con reactive
-  console.log(state.cantidad);
 </script>
 
 <template>
@@ -29,7 +24,7 @@
         class="w-full bg-gray-200 accent-lime-500 hover:accent-lime-600"
         @input="handleChange"
       />
-      {{ cantidad }}
+      {{ state.cantidad }}
     </div>
   </div>
 </template>
