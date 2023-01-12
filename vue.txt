@@ -46,3 +46,10 @@ Composition recomendado si todo el proyecto será hecho con VUE.js
 
 -Eventos en VUE
 Se agregan con la directiva v-on: evento, también con un @evento
+
+-State en VUE
+estado de la aplicación
+Se manejan con ref y rective, ambos se importan desde vue
+ref toma valores primitivos
+reactive toma objetos
+En un equipo de trabajo o proyecto grande se recomienda administras el state con una herramienta llamada Pinia(sustituto de VueX)

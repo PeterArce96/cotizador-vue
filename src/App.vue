@@ -1,9 +1,22 @@
 <script setup>
+  import {ref,reactive} from 'vue'
   import Header from './components/Header.vue'
+
+  const cantidad = ref(0); //declarar con ref
+  //declarar con reactive
+  const state = reactive({ 
+    cantidad:0
+  })
 
   function handleChange(e){
     console.log(e.target.value);
   }
+
+  // mostrar con ref
+  console.log(cantidad.value);
+
+  // mostrar con reactive
+  console.log(state.cantidad);
 </script>
 
 <template>
