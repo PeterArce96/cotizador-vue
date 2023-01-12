@@ -1,5 +1,5 @@
 <script setup>
-  import {ref,reactive} from 'vue'
+  import {ref, computed} from 'vue'
   import Header from './components/Header.vue'
 
   const cantidad = ref(10000);
@@ -7,6 +7,13 @@
   const MAX = 20000;
   const STEP = 100;
 
+  const formatearDinero = computed(() => {
+    const formatter = new Intl.NumberFormat('es-PE', {
+      style: 'currency',
+      currency: 'PEN'
+    })
+    return formatter.format(cantidad.value)
+  });
 
 </script>
 
@@ -23,7 +30,7 @@
         :step="STEP"
         v-model.number="cantidad" 
       />
-      <p>$ {{ cantidad }}</p>
+      <p class="text-center my-10 text-5xl font-extrabold text-indigo-600">{{ formatearDinero }}</p>
       <!-- Equivalente con directiva de VUE, v-text o v-html-->
       <!-- <p v-text="`$ ${cantidad}`"></p> -->
       <!-- v-model reemplaza la lineas eliminadas de

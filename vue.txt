@@ -53,3 +53,7 @@ Se manejan con ref y rective, ambos se importan desde vue
 ref toma valores primitivos
 reactive toma objetos
 En un equipo de trabajo o proyecto grande se recomienda administras el state con una herramienta llamada Pinia(sustituto de VueX)
+
+-Computed Properties
+Para un código más ordenado, seguir actualizaciones
+Un computed property es una funcion, está pendiente a los cambios de tu state y realiza los cambios necesarios cuandon este cambia
