@@ -28,3 +28,18 @@ te permiten dividir tu código en partes reutilizables
 los componentes utilizan la extensión .vue y se importan con un import de JS
 con <script setup> cualquier componente que es importado se hacen disponibles en el template
 Se pueden pasar información de un componente a otro con Props
+
+-API styles
+2 APIS: Options API y Composition API
+Options API tu aplicación utiliza una sintaxis de tipo objetos
+Composition API se definen los componentes utilizando imports escribiendo las funciones directamente en el componente
+Cuando <script> tiene el "setup" al lado se usa Composition
+Cuando se elimina el "setup" se usa Options API, y se tiene que exportar el componente:
+  export default {
+    components: {
+      Header
+    }
+  };
+
+Options recomendado para principantes, experiencia con lenguajes orientados a objetos, si su proyexto usará pequeñas piezas de vue
+Composition recomendado si todo el proyecto será hecho con VUE.js
