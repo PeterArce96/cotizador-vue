@@ -9,7 +9,7 @@
   })
 
   function handleChange(e){
-    console.log(e.target.value);
+    cantidad.value = e.target.value;
   }
 
   // mostrar con ref
@@ -29,6 +29,7 @@
         class="w-full bg-gray-200 accent-lime-500 hover:accent-lime-600"
         @input="handleChange"
       />
+      {{ cantidad }}
     </div>
   </div>
 </template>
