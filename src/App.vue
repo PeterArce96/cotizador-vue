@@ -8,10 +8,6 @@
   const STEP = 100;
 
 
-  function handleChange(e){
-    cantidad.value = Number(e.target.value);
-  }
-
 </script>
 
 <template>
@@ -25,12 +21,13 @@
         :min="MIN"
         :max="MAX"
         :step="STEP"
-        :value="cantidad"
-        @input="handleChange"
+        v-model.number="cantidad" 
       />
       <p>$ {{ cantidad }}</p>
       <!-- Equivalente con directiva de VUE, v-text o v-html-->
       <!-- <p v-text="`$ ${cantidad}`"></p> -->
+      <!-- v-model reemplaza la lineas eliminadas de
+      :value="cantidad, @input='handleChange y la función de handleChange en script'-->
     </div>
   </div>
 </template>
