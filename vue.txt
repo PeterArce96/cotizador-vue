@@ -1,0 +1,30 @@
+Vue.js
+Framework de JS 
+solo parte de JS para interface de usuario
+Basada en componentes
+Se puede instalar con VITE
+
+-Single file components
+Cada componente tiene 3 partes
+SFC --> <script> <style> <template>
+
+En <script> se coloca toda la lógica de JS del componente
+En <style> se coloca el código css del componente
+En <template> se coloca todo el código HTML del componente
+No es obligatorio que los componente tengan las 3 partes
+
+Si style tiene la palabra "scope" al lado, los estilos css dentro solo se aplican al template de este componente, si se le quita le puede aplicar los estilos a diversos componentes 
+
+-Instalación de tailwindcss, postcss y autoprefixer en el package.json
+npm install -D tailwindcss postcss autoprefixer
+
+-Crear 2 archivos, uno de postcss.config y uno de tailwindcss.config
+npx tailwindcss init -p
+
+-En Vue, si puedes darle clases a los elementos con "class", en comparación a React que utiliza "classname"
+
+-Componentes en Vue
+te permiten dividir tu código en partes reutilizables
+los componentes utilizan la extensión .vue y se importan con un import de JS
+con <script setup> cualquier componente que es importado se hacen disponibles en el template
+Se pueden pasar información de un componente a otro con Props
