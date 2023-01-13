@@ -1,6 +1,7 @@
 <script setup>
   import {ref, computed} from 'vue'
   import Header from './components/Header.vue'
+  import Button from './components/Button.vue'
 
   const cantidad = ref(10000);
   const MIN = 0;
@@ -40,14 +41,14 @@
   <div class="my-20 max-w-lg mx-auto bg-white shadow p-10">
     <Header />
     <div class="flex justify-between mt-10">
-      <button 
-        class="h-10 w-10 flex items-center justify-center font-bold bg-lime-500 rounded-full hover:outline-none hover:ring-2 hover:ring-offset-2 hover:ring-lime-500 text-white text-2xl"
-        @click="handleChangeDecremento"
-      >-</button>
-      <button 
-        class="h-10 w-10 flex items-center justify-center font-bold bg-lime-500 rounded-full hover:outline-none hover:ring-2 hover:ring-offset-2 hover:ring-lime-500 text-white text-2xl"
-        @click="handleChangeIncremento"
-      >+</button>
+      <Button 
+        :operador="'-'"
+        :fn="handleChangeDecremento"
+      />
+      <Button 
+        :operador="'+'"
+        :fn="handleChangeIncremento"
+      />
     </div>
 
     <div class="my-5">
